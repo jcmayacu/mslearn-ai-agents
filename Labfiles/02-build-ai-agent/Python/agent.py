@@ -23,8 +23,8 @@ def main():
 
     # Display the data to be analyzed
     script_dir = Path(__file__).parent  # Get the directory of the script
-    # file_path = script_dir / 'data.txt'
-    file_path = script_dir / 'Expenses_Policy.docx'
+    file_path = script_dir / 'data.txt'
+    # file_path = script_dir / '../../01-agent-fundamentals/Expenses_Policy.docx'
 
     # with file_path.open('r') as file:
     #     data = file.read() + "\n"
@@ -65,6 +65,7 @@ def main():
             model=model_deployment,
             name="Data Analysis Agent",
             instructions="You are an AI agent that analyzes the data in the file that has been uploaded. Use Python to calculate statistical metrics as necessary.",
+            # instructions="",
             tools=code_interpreter.definitions,
             tool_resources=code_interpreter.resources,
         )
